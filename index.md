@@ -1,15 +1,52 @@
 ### **Welcome to the Pac-Man Challenge!**
 
-This is a modern, multiplayer version of the classic arcade game, built with HTML, JavaScript, and some powerful AI and cloud features. The main goal remains the same: navigate the maze, eat all the pellets, and avoid the ghosts! You'll control Pac-Man using the arrow keys on your keyboard. As you progress, you'll notice the game has several unique features designed for this event, connecting all participants in a shared digital space. Pay attention to the power pellets in the corners—they are your key to turning the tables on those pesky ghosts.
+We aim to develop the Pac-Man game enhanced with AI and cloud features that connect all players.
+
+**Objective:** Your goal is to navigate the maze to eat all the pellets while avoiding the ghosts.
+
+**Game Elements:** The maze is filled with pellets (your main source of points, each is 10 point) and four colorful ghosts who will chase you.
+
+**Controls:** Use the arrow keys to move Pac-Man.
+
+**Power Pellets:** Grab the large pellets in the corners to temporarily turn the tables on those annoying ghosts!
+
 
 ### **The Global Leaderboard**
 
-On the left side of the screen, you'll see the **live leaderboard**. This isn't just your personal high score; it's a real-time ranking of every participant in this event. When you start the game, you'll be asked for a name, which is then saved in your browser. Every time you eat a pellet or a ghost, your score is instantly updated and sent to a shared database. The leaderboard automatically sorts players by their score and remaining lives, so you can always see who's in the lead. Use it to fuel your competitive spirit and aim for the top spot!
+See how you stack up against all other players in real-time, this isn't just your personal high score.
 
-### **Real-Time Translated Chat**
+1. **Set Your Name:** When you start, you'll be prompted for a name that is saved in your browser for the event.
+3. **Instant Updates:** Your score and remaining lives are sent to the shared database the moment they change.
+4. **Platform:** The live leaderboard uses _Google's Firebase Realtime Database_.
+5. **Database URL:** All data is sent to the following URL: https://pacman-game-8c8bc-default-rtdb.firebaseio.com/
+6. **Data Path:** Player scores are stored under the /leaderboard path in the database.
+7. **Data Format:** The game sends an object with the following structure for each player: { name: "PlayerName", score: 150, lives: 3 }.
 
-On the right side of the screen is the **live chat box**, which connects you with every other player. You can share tips, celebrate high scores, or just chat. This feature has a unique twist: to ensure everyone can communicate, an AI agent automatically translates any message you type into English before it's sent. The chat will even show the original message in parentheses, so you can see the translation in action. Additionally, you can type special commands like `/weather [city]` to fetch and display real-world weather data, which can even change the theme of your game board.
 
 ### **Your AI Assistant**
 
-If you ever find yourself trapped or unsure where to go, you have an **AI assistant** at your disposal. Clicking the **"ASK AI"** button will pause the game and send the current positions of Pac-Man and the ghosts to an advanced AI model. The AI will quickly analyze your situation and provide a concise, strategic recommendation, telling you which ghosts are the most immediate threat and which direction offers the best escape route. Use this tool wisely to get out of tight spots and extend your game.
+Get instant help by clicking the _"ASK AI"_ button to send your game state to an AI model for a strategic recommendation 😉
+
+The game sends the current positions of Pac-Man, the maze structure, and the ghosts to an LLM, which analyzes the situation to find the best escape route.
+
+1. **AI Model:** You should use the _qwen/qwen3-coder_ model.
+2. **API Endpoint:** Requests are sent to _https://openrouter.ai/api/v1/chat/completions_
+3. **API Key:** An example key is sk-or-v1-b73a98f37d0e2de9eb9d63245ed98b8e6fec47e466521da4ce24565d7
+4. **Escape Route:** The AI will identify the most immediate threat and suggest the best direction to move to get out of a tight spot.
+
+
+### Dynamic Weather Themes
+
+1. **select a city:** the selected city affects the game’s visual theme (background, color, or speed of pac man) to match the real-time weather of the chosen location.
+
+
+### **Real-Time Chat**
+
+On the right side of the screen is the **live chat box**, which connects you with every other player. 
+
+1. **Set Your Name:** When you start, you'll be prompted for a name that is saved in your browser for the event.
+2. **Platform:** The live chat uses _Google's Firebase Realtime Database_.
+3. **Database URL:** All data is sent to the following URL: https://pacman-game-8c8bc-default-rtdb.firebaseio.com/
+4. **Data Path:** All messages are stored under the /messages path.
+5. **Data Format:** Messages are sent as an object: { name: "PlayerName", text: "Translated text", timestamp: ... }
+
