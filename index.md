@@ -42,7 +42,7 @@ The game sends the current positions of Pac-Man, the maze structure, and the gho
 
 On the right side of the screen is the **live chat box**, which connects you with every other player. 
 
-1. **Set Your Name:** When you start, you'll be prompted for a name that is saved in your browser for the event.
+1. **Set Your Name:** When you start, you'll be prompted for a name that is saved in your browser for the event. 🔥
 2. **Platform:** The live chat uses _Google's Firebase Realtime Database_. 
 3. **Database URL:** All data is sent to the following URL: https://pacman-game-8c8bc-default-rtdb.firebaseio.com/ 🔥
 4. **Data Path:** All messages are stored under the /messages path. 🔥
