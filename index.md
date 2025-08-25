@@ -17,8 +17,8 @@ See how you stack up against all other players in real-time, this isn't just you
 4. **Platform:** The live leaderboard uses _Google's Firebase Realtime Database_.
 5. **Database URL:** All data is sent to the following URL: https://pacman-game-8c8bc-default-rtdb.firebaseio.com/ 🔥
 6. **Data Path:** Player scores are stored under the /leaderboard path in the database. 🔥
-7. **Data Format:** The game sends an object with the following structure for each player: { name: "PlayerName", score: 150, lives: 3 }. 🔥
-8. **Update Only:** The game must update the points based on the given name. Do not add a record with to the collection with every point ⚠️
+7. **Data Format:** The game sends an object with the following structure for each player:{ name: "PlayerName", score: 150, lives: 3 }🔥
+9. **Update Only:** The game must update the points based on the given name. Do not add a record with to the collection with every point ⚠️
 
 
 ### **Your AI Assistant**
@@ -46,5 +46,5 @@ On the right side of the screen is the **live chat box**, which connects you wit
 2. **Platform:** The live chat uses _Google's Firebase Realtime Database_. 
 3. **Database URL:** All data is sent to the following URL: https://pacman-game-8c8bc-default-rtdb.firebaseio.com/ 🔥
 4. **Data Path:** All messages are stored under the /messages path. 🔥
-5. **Data Format:** Messages are sent as an object: { name: "PlayerName", text: "Translated text", timestamp: ... } 🔥
+5. **Data Format:** Messages are sent as an object: { name: "PlayerName", text: "some text", timestamp: ... } 🔥
 
