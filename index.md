@@ -2,13 +2,10 @@
 
 We aim to develop the Pac-Man game enhanced with AI and cloud features that connect all players.
 
-**Objective:** Your goal is to navigate the maze to eat all the pellets while avoiding the ghosts.
-
-**Game Elements:** The maze is filled with pellets (your main source of points, each is 10 point) and four colorful ghosts who will chase you.
-
-**Controls:** Use the arrow keys to move Pac-Man.
-
-**Power Pellets:** Grab the large pellets in the corners to temporarily turn the tables on those annoying ghosts!
+1. **Objective:** Your goal is to navigate the maze to eat all the pellets while avoiding the ghosts.
+2. **Game Elements:**  pellets, each pallet 10 points, power pellets, and four colorful ghosts who will chase you.
+3. **Controls:** Use the arrow keys to move Pac-Man.
+4. **Power Pellets:** Grab the power pellets in the corners to temporarily turn the tables on those annoying ghosts!
 
 
 ### **The Global Leaderboard**
